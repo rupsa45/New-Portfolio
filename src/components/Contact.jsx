@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     <section id="contact" className="min-h-screen flex items-center justify-center py-20">
       <motion.div
-        className="bg-white  max-w-6xl w-full rounded-lg shadow-lg p-8"
+        className="bg-[#EEE5E9]  max-w-6xl w-full rounded-lg shadow-lg p-8 poppins-regular"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -30,7 +30,7 @@ const Contact = () => {
       >
         <div className="flex items-center mb-8">
           <Phone className="w-8 h-8 text-red-600 mr-3" />
-          <h2 className="text-3xl font-bold text-red-600">Place Your Order (Contact Me)</h2>
+          <h2 className="text-3xl font-bold text-red-600 rubik-vinyl-regular">Place Your Order (Contact Me)</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -52,7 +52,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-gray-600">Email</p>
-                <p className="text-gray-800 font-medium">rupsa@example.com</p>
+                <a href={`mailto:${`dasrupsa831@gmail.com`}`} className="text-gray-800 font-medium">dasrupsa831@gmail.com</a>
               </div>
             </motion.div>
 

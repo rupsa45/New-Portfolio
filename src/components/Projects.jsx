@@ -22,7 +22,7 @@ const Projects = () => {
       className="min-h-screen flex items-center justify-center py-20"
     >
       <motion.div
-        className="bg-white max-w-6xl w-full rounded-lg shadow-lg p-8"
+        className="bg-[#EEE5E9] max-w-6xl w-full rounded-lg shadow-lg p-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -31,7 +31,7 @@ const Projects = () => {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center">
             <Utensils className="w-8 h-8 text-red-600 mr-3" />
-            <h2 className="text-3xl font-bold text-red-600">
+            <h2 className="text-3xl font-bold text-red-600 rubik-vinyl-regular">
               My Menu (Projects)
             </h2>
           </div>
@@ -96,7 +96,7 @@ const Projects = () => {
 
                     {/* Detailed Info */}
                     <motion.div className="absolute inset-0 bg-black/90 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="p-6 h-full flex flex-col justify-between">
+                      <div className="p-6 h-full flex flex-col justify-between poppins-regular">
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-4">
                             {project.title}
@@ -113,7 +113,7 @@ const Projects = () => {
                             {project.techStack.map((tech, index) => (
                               <motion.span
                                 key={index}
-                                className="px-3 py-1 bg-red-600 text-white rounded-full text-sm"
+                                className="px-3 py-1 bg-red-600 text-white rounded-full text-sm poppins-regular"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileHover={{ scale: 1.1 }}
                                 animate={{ opacity: 1, y: 0 }}

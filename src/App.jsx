@@ -18,12 +18,12 @@ function App() {
       <Contact />
       </main>
       <motion.footer 
-        className="bg-white text-red-600 text-center py-6"
+        className="bg-[#EEE5E9] text-red-600 text-center py-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <p className="text-lg">© {new Date().getFullYear()} Rupsa - Finger Lickin' Good Code</p>
+        <p className="text-lg">© {new Date().getFullYear()} Rupsa - cooked with love ❤️</p>
       </motion.footer>
     </div>
   );

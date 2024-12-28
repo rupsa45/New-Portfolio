@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section id="about" className=" min-h-screen flex items-center justify-center py-20">
       <motion.div
-        className="bg-white max-w-4xl rounded-lg shadow-lg p-8"
+        className="bg-[#EEE5E9] max-w-4xl rounded-lg shadow-lg p-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -16,7 +16,7 @@ const About = () => {
       >
         <div className="flex items-center mb-8">
           <Drumstick className="w-8 h-8 text-red-600 mr-3" />
-          <h2 className="text-3xl font-bold text-red-600">About Me</h2>
+          <h2 className="text-3xl font-bold text-red-600 rubik-vinyl-regular">About Me</h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -38,9 +38,10 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="poppins-regular"
           >
             <p className="text-gray-700 text-lg mb-4">
-            {`I'm`} Rupsa, a passionate web developer with expertise in the MERN stack. 
+            I'm a passionate developer with a secret recipe for cooking up delicious code. 
             Just like the {`Colonel's`} 11 herbs and spices, I bring a unique blend of skills 
             and creativity to every project I work on. 
             </p>
