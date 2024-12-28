@@ -28,7 +28,7 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <div className="flex items-center justify-between mb-8">
+        <div className="lg:flex items-center justify-between mb-8">
           <div className="flex items-center">
             <Utensils className="w-8 h-8 text-red-600 mr-3" />
             <h2 className="text-3xl font-bold text-red-600 rubik-vinyl-regular">
