@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,6 +13,12 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const menuItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
     <motion.header
@@ -31,9 +39,11 @@ const Header = () => {
           />
           <h1 className="text-2xl font-bold text-red-600">Rupsa</h1>
         </motion.div>
-        <nav>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:block">
           <ul className="flex space-x-6">
-            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+            {menuItems.map((item) => (
               <motion.li
                 key={item}
                 whileHover={{ scale: 1.1 }}
@@ -49,8 +59,52 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden text-black p-2 focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-[#EEE5E9] shadow-lg"
+          >
+            <nav className="container mx-auto px-4 py-4">
+              <ul className="space-y-4">
+                {menuItems.map((item) => (
+                  <motion.li
+                    key={item}
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -20, opacity: 0 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <a
+                      href={`#${item.toLowerCase()}`}
+                      className="block text-[#000000] hover:text-red-700 font-medium py-2"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item}
+                    </a>
+                  </motion.li>
+                ))}
+              </ul>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
+
 export default Header;

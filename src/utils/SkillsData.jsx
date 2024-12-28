@@ -14,7 +14,7 @@ import { FaGitAlt } from "react-icons/fa";
 export const skills = [
   { name: "HTML", category: "Frontend", icon: FaHtml5 },
   { name: "CSS", category: "Frontend", icon: IoLogoCss3 },
-  { name: "JavaScript", category: "Frontend/Backend", icon: IoLogoJavascript },
+  { name: "JavaScript", category: "Frontend", icon: IoLogoJavascript },
   { name: "Tailwind CSS", category: "Frontend", icon: RiTailwindCssFill },
   { name: "React", category: "Frontend", icon: FaReact },
   { name: "Node.js", category: "Backend", icon: FaNodeJs },
