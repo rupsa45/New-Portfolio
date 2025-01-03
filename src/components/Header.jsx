@@ -18,7 +18,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  const menuItems = ["Home", "About", "Skills", "Projects", "Contact"];
+  const menuItems = ["About", "Projects", "Contact"];
 
   return (
     <motion.header
