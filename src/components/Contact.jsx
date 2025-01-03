@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, Mail, User, MessageSquare, Send, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, User, MessageSquare, Send, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
 import { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
@@ -79,9 +79,9 @@ const Contact = () => {
               <p className="text-gray-800 font-medium mb-4">Connect with me:</p>
               <div className="flex space-x-4">
                 {[
-                  { icon: Github, link: "#" },
-                  { icon: Linkedin, link: "#" },
-                  { icon: Twitter, link: "#" },
+                  { icon: Github, link: "https://github.com/rupsa45" },
+                  { icon: Linkedin, link: "https://www.linkedin.com/in/rupsa-das-96b26b231/" },
+                  { icon: Instagram, link: "https://www.instagram.com/rupsaaa98/" },
                 ].map((social, index) => (
                   <motion.a
                     key={index}
@@ -89,6 +89,7 @@ const Contact = () => {
                     className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors"
                     whileHover={{ scale: 1.1, rotate: 360 }}
                     whileTap={{ scale: 0.9 }}
+                    target='_blank'
                   >
                     <social.icon className="w-5 h-5" />
                   </motion.a>
